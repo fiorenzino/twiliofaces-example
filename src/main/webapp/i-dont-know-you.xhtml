@@ -5,7 +5,9 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:tf="http://twiliofaces.org/twiliofaces">
 	<tf:response>
-		<tf:say>non ti conosco, come ti chiami?</tf:say>
+		<tf:say voice="woman" language="it">Ciao, non ti conosco, come ti chiami?</tf:say>
+		<tf:record method="POST" maxLength="5" finishOnKey="*"
+			transcribe="true" action="/print-record-url.jsf"
+			transcribeCallback="/transcription.jsf"></tf:record>
 	</tf:response>
-
 </ui:composition>

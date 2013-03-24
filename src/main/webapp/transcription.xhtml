@@ -6,12 +6,4 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:tf="http://twiliofaces.org/twiliofaces">
 	<f:event type="preRenderView" listener="#{twilioEvaluator.init}" />
-	<c:choose>
-		<c:when test="#{twilioEvaluator.iKnowYou()}">
-			<ui:include src="i-know-you.xhtml" />
-		</c:when>
-		<c:otherwise>
-			<ui:include src="i-dont-know-you.xhtml" />
-		</c:otherwise>
-	</c:choose>
 </f:view>
